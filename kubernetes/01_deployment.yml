@@ -16,6 +16,7 @@ spec:
       containers:
       - name: spring-boot-hello-world
         image: bobcrutchley/spring-boot-hello-world
+        imagePullPolicy: Always
         ports:
         - name: http-port
           containerPort: 8080
