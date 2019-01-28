@@ -4,12 +4,30 @@ The application can be deployed into a Docker image which can then be run just a
 For an example of how this project can be implemented into a simple pipeline, see the [spring-boot-hello-world-ci](https://github.com/bob-crutchley/spring-boot-hello-world-ci) project.
 
 - It will be useful to first have [Docker Hub Account](https://hub.docker.com/signup) so that your images can be accessible on the internet
-- You will need to [Install Docker](docs/install_docker.md)
-- We can build the Docker image using this command replacing **bobcrutchley** with whatever your Docker Hub username is:
+- You will need to install Docker
+
+#### Installing Docker (if you need to)
+
+On Linux you can run these commands, log out and back in.
+```bash
+curl https://get.docker.com | sudo bash
+sudo usermod -aG docker $(whoami)
+exit
+```
+
+Docker Hub Website and follow the install steps, Docker Compose will be installed this way as well -
+[(Windows)](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+[(Mac)](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
+
+
+#### Building the Docker Image
+We can build the Docker image using this command replacing **bobcrutchley** with whatever your Docker Hub username is:
     ```bash
     docker build -t bobcrutchley/spring-boot-hello-world:latest
     ```
-- Pushing your new Image to Docker Hub will make it accessible from anywhere:
+
+#### Pushing Your Image to Docker Hub
+Pushing your new Image to Docker Hub will make it accessible from anywhere:
     ```bash
     docker login
     docker push bobcrutchley/spring-boot-hello-world:latest
