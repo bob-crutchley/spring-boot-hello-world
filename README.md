@@ -22,21 +22,21 @@ Docker Hub Website and follow the install steps, Docker Compose will be installe
 
 #### Building the Docker Image
 We can build the Docker image using this command replacing **bobcrutchley** with whatever your Docker Hub username is:
-    ```bash
-    docker build -t bobcrutchley/spring-boot-hello-world:latest
-    ```
+```bash
+docker build -t bobcrutchley/spring-boot-hello-world:latest
+```
 
 #### Pushing Your Image to Docker Hub
 Pushing your new Image to Docker Hub will make it accessible from anywhere:
-    ```bash
-    docker login
-    docker push bobcrutchley/spring-boot-hello-world:latest
-    ```
+```bash
+docker login
+docker push bobcrutchley/spring-boot-hello-world:latest
+```
 #### Running with Docker
-- The image can also be run locally:
-    ```bash
-    docker run -d -p 8080:8080 --name spring-boot-hello-world --rm bobcrutchley/spring-boot-hello-world:latest
-    ```
+The image can also be run locally:
+```bash
+docker run -d -p 8080:8080 --name spring-boot-hello-world --rm bobcrutchley/spring-boot-hello-world:latest
+```
 #### Running with Kubernetes (Google Cloud Platform)
 You will need to have the following to be able to these commands:
 - A free trial or subscription to [Google Cloud Platform](https://console.cloud.google.com/freetrial)
