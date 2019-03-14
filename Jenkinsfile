@@ -1,5 +1,6 @@
 node {
 	stage("maven package") {
+		sh "ls -al"
 		sh "mvn clean package"
 	}
 	stage("install new jar") {
